@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- <button type = "button" class = "btn btn-primary">Click</button> -->
+
+    <!-- GRID : row : 12 colounm partitions. -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img class="navbar-brand"
+                src="http://vignette3.wikia.nocookie.net/logopedia/images/9/9c/HarryPotter.png/revision/latest?cb=20160624203951"
+                alt="" width="120">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Texts</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+
+
+        <div class="row" style="margin-top: 20px;">
+            <!-- col = colunm md means medium screen and 4 is the partition value -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card" style='display: flex; justify-content: center; align-items: center;'>
+                        <b>
+                            <p>
+                                My Profile
+                            </p>
+                        </b>
+                        <img src="data:image/jpeg;base64,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"
+                            alt="" height="70" width="70" style="border-radius: 50%;">
+                    </div>
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h5>
+                                Interests
+                                </h3>
+                                <p class="btn btn-dark">Gaming</p>
+                                <p class="btn btn-info">Labels</p>
+                                <p class="btn btn-danger">Anime</p>
+                                <p class="btn btn-success">Nature</p>
+                                <p class="btn btn-primary">Jobs</p>
+                                <p class="btn btn-secondary">News</p>
+                        </div>
+
+                    </div>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Merlin's Beard!</strong> My, my, Look at your texts!
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="links text-center">
+                        <p class="btn btn-link">Company Link</p><br>
+                        <p class="btn btn-link">Work Link</p><br>
+                        <p class="btn btn-link">Post Link</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="col-md-7">
+                <div class="card">
+                    <input type="text" value="Status: Offline">
+                    <div class="card-body">
+                        <button><i class="fa-solid fa-thumbs-up"></i> Like</button>
+
+                    </div>
+
+
+                </div>
+                <div class="row" style='margin-top:10px'>
+                    <div class="col-md-3">
+                        <div class="card" style="align-items: center ; ">
+                            <p>
+                                Daniel
+                            </p>
+                            <img src="https://i0.wp.com/www.uselessdaily.com/wp-content/uploads/2017/06/Daniel-Radcliffe-Wallpaper.jpg?fit=1920%2C1440&ssl=1"
+                                alt="" height="80" width="80" style="border-radius: 50%;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card text-center">
+                            <p style="font-size:20px">
+                                I dont go looking for trouble, it usually finds me...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" style='margin-top:10px'>
+                    <div class="col-md-3">
+                        <div class="card" style="align-items: center ; ">
+                            <p>
+                                Rupert
+                            </p>
+                            <img src="https://img.ecartelera.com/noticias/38000/38091-m.jpg?v=2.0" alt="" height="80"
+                                width="80" style="border-radius: 50%;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card text-center">
+                            <p style="font-size:20px">
+                                What's life with a few dragons?
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" style='margin-top:10px'>
+                    <div class="col-md-3">
+                        <div class="card" style="align-items: center ; ">
+                            <p>
+                                Tom
+                            </p>
+                            <img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2012/01/03/09/Tom-Felton_415.jpg?width=968&auto=webp&quality=75&crop=968:645%2Csmart"
+                                alt="" height="80" width="80" style="border-radius: 50%;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card text-center">
+                            <p style="font-size:20px">
+                                No one asked you opinion, you fithy little mudblood!
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" style='margin-top:10px'>
+                    <div class="col-md-3">
+                        <div class="card" style="align-items: center ; ">
+                            <p>
+                                Richard
+                            </p>
+                            <img src="https://www.thefamouspeople.com/profiles/images/richard-harris-9.jpg" alt=""
+                                height="80" width="80" style="border-radius: 50%;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card text-center">
+                            <p style="font-size:20px">
+                                Happiness can be found in the darkest of times, when one remembers to look for the light.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" style='margin-top:10px'>
+                    <div class="col-md-3">
+                        <div class="card" style="align-items: center ; ">
+                            <p>
+                                Evanna
+                            </p>
+                            <img src="https://tse4.mm.bing.net/th?id=OIP.UYo-FUL8X1kekHGfPnDNwAHaFf&pid=Api&P=0&w=220&h=163"
+                                alt="" height="80" width="80" style="border-radius: 50%;">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card text-center">
+                            <p style="font-size:20px">
+                                Dont worry! you are just as sane as I am.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <p>
+                            Breaking News: Wanted
+                        </p>
+                        <img src="https://cdn.europosters.eu/image/750/posters/harry-potter-wanted-sirius-black-i30818.jpg"
+                            alt="" width="160" height="230">
+                        <p style="text-align: center;">
+                            Azkaban Prison
+                        </p>
+                        <p style="text-align: center;">
+                            5:11am Sat 5 May 2022
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="well" style="padding:0">
+                        <!--Adding JSON Lottie Animation to website -->
+                        <center>
+                            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_qmgFMQ.json"
+                                background="transparent" speed="1" ; loop controls autoplay></lottie-player>
+                        </center>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                        <p>
+                            ADS
+                        </p>
+                        <img src="https://i.ytimg.com/vi/FV6S84-38Qw/hqdefault.jpg" alt="" width="150"
+                            style="margin-top: 25px;">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+
+
+                </div>
+                <div class="card">
+                    <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                        <p>
+                            ADS
+                        </p>
+                        <img src="https://i.pinimg.com/originals/25/16/96/251696e85e4453ce166b48cf2b6daf31.gif" alt=""
+                            width="150" style="margin-top: 25px;">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
